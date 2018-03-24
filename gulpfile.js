@@ -39,10 +39,10 @@ gulp.task('sassCompile', () => {
           browsers: ['last 16 versions', '> 1%', 'safari 5', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'],
           cascade: false
       }))
-      .pipe(cssmin())
-      .pipe(rename({
-        suffix: '.min'
-      }))
+			.pipe(cssmin())
+			.pipe(rename({
+				suffix: '.min'
+			}))
       .pipe(gulp.dest('css'))
       .pipe(browserSync.stream());
 });
